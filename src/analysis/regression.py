@@ -93,7 +93,7 @@ for i in range(0, int(len(tuple_2)-1)):
 
 
 classifications_islam = classifier.classify_many(feature_sets_2)
-print(classifications_islam)
+#print(classifications_islam)
 
 
     

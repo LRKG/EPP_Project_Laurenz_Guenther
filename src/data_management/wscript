@@ -8,7 +8,7 @@ def build(ctx):
         features='run_py_script',
         source='timing.py',
         deps=[
-              ctx.path_to(ctx,'IN_DATA','chs_data.dta'),
+              ctx.path_to(ctx,'IN_DATA','Bild_Training.xlsx'),
               ctx.path_to(ctx,'IN_MODEL_CODE','test_update.py')
              ],
         target= [
