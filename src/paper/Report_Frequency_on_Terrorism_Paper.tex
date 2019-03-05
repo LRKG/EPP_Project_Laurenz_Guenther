@@ -1,0 +1,146 @@
+\documentclass[11pt, a4paper, leqno]{article}
+\usepackage{a4wide}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{float, afterpage, rotating, graphicx}
+\usepackage{epstopdf}
+\usepackage{longtable, booktabs, tabularx}
+\usepackage{fancyvrb, moreverb, relsize}
+\usepackage{eurosym, calc}
+% \usepackage{chngcntr}
+\usepackage{amsmath, amssymb, amsfonts, amsthm, bm}
+\usepackage{caption}
+\usepackage{mdwlist}
+\usepackage{xfrac}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{subcaption}
+\usepackage{minibox}
+% \usepackage{pdf14} % Enable for Manuscriptcentral -- can't handle pdf 1.5
+% \usepackage{endfloat} % Enable to move tables / figures to the end. Useful for some submissions.
+
+
+\usepackage[
+natbib=true,
+bibencoding=inputenc,
+bibstyle=authoryear-ibid,
+citestyle=authoryear-comp,
+maxcitenames=3,
+maxbibnames=10,
+useprefix=false,
+sortcites=true,
+backend=biber
+]{biblatex}
+\AtBeginDocument{\toggletrue{blx@useprefix}}
+\AtBeginBibliography{\togglefalse{blx@useprefix}}
+\setlength{\bibitemsep}{1.5ex}
+\addbibresource{refs.bib}
+
+
+
+
+
+\usepackage[unicode=true]{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	anchorcolor=black,
+	citecolor=black,
+	filecolor=black,
+	menucolor=black,
+	runcolor=black,
+	urlcolor=black
+}
+
+
+\widowpenalty=10000
+\clubpenalty=10000
+
+\setlength{\parskip}{1ex}
+\setlength{\parindent}{0ex}
+\setstretch{1.5}
+
+
+\begin{document}
+	
+	\title{Assignment 6\thanks{Laurenz Guenther, BGSE. Email: \href{mailto:s3laguen@uni-bonn.de}{\nolinkurl{s3laguen [at] uni-bonn [dot] de}}.}}
+	
+	\author{Laurenz Guenther}
+	
+	\date{
+		{\bf Preliminary -- please do not quote} 
+		\\[1ex] 
+		\today
+	}
+	
+	\maketitle
+	
+	
+	\begin{abstract}
+		The goal of this research project is to evaluate how biased newspaper coverage of terrorist attacks is. The current manuscript is a very early version. It contains the frequency of reporting on islamist terrorist attacks by the most popular german newspaper over the period of 2006-2019. 
+	\end{abstract}
+	\clearpage
+	
+	\section{Introduction} % (fold)
+	\label{sec:introduction}
+
+
+
+Interest in biased media coverage has recently spiked, triggered by several surveys indicating a loss of trust of households in the media [CITE]. 
+
+This lost in trust also has a ploitical component, as it is often used as argument by extremist groups as a justification for widerstand against the political ordnung [CITE], possibly leading to serious verwerfungen. It is hence important to understand in which sense the media is biased and why it is perceived as biased.
+
+Observation suggests that both, left, islamists and right wing extremists regularly claim the media biased against them[CITE]. A commoon argument is that ill-doings of the own group are reported on more often than on similar doings by the other side. To better understand how this perception compares to reality, I want to compute the actual probability that several kinds of extremism are reported on if casdulties are similar bur prepetuators differ regarding their ideology.
+
+
+
+For instance, one might suspect that terrorist attacks are reported more frequently, all else equal, if they are committed by islamists than if they are committed by non-islamists. 
+
+Figure ... does a first attempt .....
+
+
+
+
+
+
+
+RELATED LIETRATU
+Accordingly, several measures have put forward in past years to measure media bias. ..... [CITE]
+
+
+
+
+
+
+
+
+ \footnote{This paper was generated using \citet{GaudeckerEconProjectTemplates}.}
+%\input{formulas/decision_rule}
+
+\begin{figure}
+   \caption{A simple line-chart showing the number of articles in the Bildzeitung on islamist terrorist attacks per year.}
+  
+ \includegraphics[width=\textwidth]{../../out/figures/line_chart.pdf}
+
+\end{figure}
+
+
+ section introduction (end)
+
+
+
+
+\setstretch{1}
+%\printbibliography
+\setstretch{1.5}
+
+
+
+
+% \appendix
+
+% The chngctr package is needed for the following lines.
+% \counterwithin{table}{section}
+% \counterwithin{figure}{section}
+
+\end{document}

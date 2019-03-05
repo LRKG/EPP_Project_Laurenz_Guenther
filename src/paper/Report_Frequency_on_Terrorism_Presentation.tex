@@ -1,0 +1,98 @@
+\documentclass[11pt]{beamer}
+% \documentclass[11pt,handout]{beamer}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{float, afterpage, rotating, graphicx}
+\usepackage{epstopdf}
+\usepackage{longtable, booktabs, tabularx}
+\usepackage{fancyvrb, moreverb, relsize}
+\usepackage{eurosym, calc}
+\usepackage{amsmath, amssymb, amsfonts, amsthm, bm} 
+
+
+\usepackage[
+natbib=true,
+bibencoding=inputenc,
+bibstyle=authoryear-ibid,
+citestyle=authoryear-comp,
+maxcitenames=3,
+maxbibnames=10,
+useprefix=false,
+sortcites=true,
+backend=biber
+]{biblatex}
+\AtBeginDocument{\toggletrue{blx@useprefix}}
+\AtBeginBibliography{\togglefalse{blx@useprefix}}
+\setlength{\bibitemsep}{1.5ex}
+\addbibresource{refs.bib}
+
+
+
+\hypersetup{colorlinks=true, linkcolor=black, anchorcolor=black, citecolor=black, filecolor=black, menucolor=black, runcolor=black, urlcolor=black}
+
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{frametitle}{\centering\vspace{1ex}\insertframetitle\par}
+
+
+\begin{document}
+	
+	\title{Assignemnt 6}
+	
+	\author[Laurenz Guenther]
+	{
+		{\bf Laurenz Guenther}\\
+		{\small BGSE}\\[1ex]
+	}
+	
+	
+	\begin{frame}
+	\titlepage
+	\note{~}
+\end{frame}
+
+
+\begin{frame}[t]
+\frametitle{Introduction}
+\begin{itemize}
+	\item<+-> This presentation was generated using \citet{GaudeckerEconProjectTemplates}
+	\item<+-> The data on run times is generated using the group 12 fast update function from assignment 5.
+	\item The following figure illustrates how the run time of the algorithm changes as the number of observations increases.
+	\item After experimentation we found that a simple linear regression usually provides a good fit.
+	% \item<+-> The decision rule of an agent is \input{formulas/decision_rule}
+\end{itemize}
+\note{~}
+\end{frame}
+
+
+
+\begin{frame}
+	\begin{figure}
+		\caption{Regression plot: number of observations vs run time}		
+		\includegraphics[width=\textwidth]{../../out/figures/line_chart.pdf}	
+	\end{figure}
+\end{frame}
+
+
+
+
+% Print black screen only in presentation mode for finishing up.
+\mode<beamer> {
+\beamersetaveragebackground{black}
+\begin{frame}
+\frametitle{}
+\end{frame}
+
+\beamersetaveragebackground{white}
+}
+
+\begin{frame}[allowframebreaks]
+\frametitle{References}
+
+\renewcommand{\bibfont}{\normalfont\footnotesize}
+\printbibliography
+
+
+\end{frame}
+
+\end{document}
