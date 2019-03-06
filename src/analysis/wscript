@@ -10,24 +10,7 @@ def build(ctx):
          deps= [ctx.path_to(ctx, 'OUT_DATA', 'all_articles.xlsx'),
                 ctx.path_to(ctx, 'OUT_DATA', 'training.xlsx')
                 ],
-         target= ctx.path_to(ctx, 'OUT_FIGURES',                  'line_chart.pdf')               
+         target= ctx.path_to(ctx, 'OUT_FIGURES',   'line_chart.pdf')               
          )
 
 
-'''
-#! python
-
-
-def build(ctx):
-
-    # Illustrate use of run_py_script with automatic model specification.
-     ctx(
-         features='run_py_script',
-         source='regression.py',
-         #deps= [
-         #		ctx.path_to(ctx, 'OUT_DATA', 'training.xlsx'),
-         #		ctx.path_to(ctx, 'OUT_DATA', 'all_articles.xlsx')
-         #		],
-         target= ctx.path_to(ctx, 'OUT_FIGURES',                  'line_chart.pdf')               
-         )
-'''

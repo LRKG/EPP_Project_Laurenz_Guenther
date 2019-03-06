@@ -4,9 +4,6 @@ from bs4 import BeautifulSoup as soup
 import xlsxwriter
 from openpyxl import load_workbook
 from nltk.tokenize import word_tokenize 
-from bs4 import BeautifulSoup as soup
-from openpyxl import load_workbook
-from nltk.tokenize import word_tokenize 
 import random
 
 
@@ -17,7 +14,6 @@ filepath=ppj("IN_DATA", "Bild_Training.xlsx")
 wb=load_workbook(filepath)
 sheet=wb.active
 max_row=sheet.max_row
-
 
 
 # Create an empty dictionary that will be filled later.
@@ -35,7 +31,7 @@ dict_prediction = {'words': [], 'date': []}
 
 
 # Loop over all dates in the raw-excel file.
-for i_row in range(0, 3200):#max_row):  #######################################################################
+for i_row in range(0, 4000):#max_row): 
     try:
         # Skip a date if it is not indicated as containing articles about terrorism 
         # otherwise extract the titles of the articles about terrorism and save
@@ -80,7 +76,7 @@ for i_row in range(0, 3200):#max_row):  ########################################
         else:
             islam_article_names_array = []
 
-        r1 = random.randint(1, 1200) #800
+        r1 = random.randint(1, 800) #800
         if (if_indicator > 0) or (if_indicator == 0 and r1 < 2):
             try:
                 # Get the date from the excel-file and bring it in the right form to scrape.
@@ -120,13 +116,7 @@ for i_row in range(0, 3200):#max_row):  ########################################
                 
                 
                 # Loop over these links to single articles.
-                # Begn at 8 as the first 8 contaiers are always reserved for uninteresting stuff.
-                #for i in range(8, len(containers) ):
-                    
-                
-                    
-                    
-                   
+                # Begn at 8 as the first 8 contaiers are always reserved for uninteresting stuff.     
                 for i in range(8, len(containers)):   
                     # Tell me at which date and which article you are.
                     #print("date=", date, "......", "container=", i )
@@ -142,13 +132,7 @@ for i_row in range(0, 3200):#max_row):  ########################################
                     article_website.close()
                     article_website_soup = soup(article_website_html, "html.parser")
                 
-                    
-                
                     try:
-                        
-                    
-                              
-
                         # Try to access the article. If this is not possible
                         # or the article is empty, go on.
                     
@@ -202,7 +186,7 @@ for i_row in range(0, 3200):#max_row):  ########################################
                         # the article with a low probability to keep the sample of 
                         # articles balanced.
                         scrape_indicator = 0
-                        r = random.randint(1,200)
+                        r = random.randint(1, 200)
 
                         if (terror_indicator == 0):
                             if r < 2:
@@ -277,8 +261,6 @@ for i_row in range(0, 3200):#max_row):  ########################################
                             dict_prediction["date"].append(date)
                 
 
-
-
                     except:
                         pass
             except:
@@ -290,10 +272,6 @@ for i_row in range(0, 3200):#max_row):  ########################################
                   
        
             
-            
-
-  
-    
 
 # Create a workbook for the output and add a worksheet.
 workbook = xlsxwriter.Workbook(ppj("OUT_DATA", "all_articles.xlsx")) 
@@ -310,16 +288,13 @@ for i in range(0, len(dict_prediction["words"])):
     words_strings.append(';'.join(dict_training["words"][i]))
 
 # Loop over all articles in the dictionary and save the word-strings in the excel-sheet.
-for row_id in range(0, len(dict_prediction["words"])):  # vorher range(1, len...)  so ist richtig, muss das beim anderen auch geändert werden???  Und dann muss unten row_id +1 ?XXXXXXXXXXXXXXXXX
+for row_id in range(0, len(dict_prediction["words"])): 
     worksheet.write(row_id + 1, 1, words_strings[row_id])    
     worksheet.write(row_id + 1, 0, str(dict_prediction["date"][row_id]) )        
         
 workbook.close()
 
 
-
-
-   
 
 
 # Create a workbook for the output and add a worksheet.

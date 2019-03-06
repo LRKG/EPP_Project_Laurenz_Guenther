@@ -441,4 +441,25 @@
 	Volume = {12},
 	Year = {2010}}
 
+@InCollection{puglisi2015empirical,
+  author    = {Puglisi, Riccardo and Snyder Jr, James M},
+  title     = {Empirical studies of media bias},
+  booktitle = {Handbook of media economics},
+  publisher = {Elsevier},
+  year      = {2015},
+  volume    = {1},
+  pages     = {647--667},
+}
+
+@Article{groseclose2005measure,
+  author    = {Groseclose, Tim and Milyo, Jeffrey},
+  title     = {A measure of media bias},
+  journal   = {The Quarterly Journal of Economics},
+  year      = {2005},
+  volume    = {120},
+  number    = {4},
+  pages     = {1191--1237},
+  publisher = {MIT Press},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

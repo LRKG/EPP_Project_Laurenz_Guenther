@@ -17,11 +17,11 @@ def set_project_paths(ctx):
     pp["PROJECT_ROOT"] = "."
     pp["IN_DATA"] = "src/original_data/"
     pp["IN_DATA_MANAGEMENT"] = "src/data_management/"
-    pp["IN_MODEL_CODE"] = "src/model_code"
+    #pp["IN_MODEL_CODE"] = "src/model_code"
     pp["LIBRARY"] = "src/library"
     pp["BLD"] = ""
     pp["OUT_DATA"] = f"{out}/out/data"
-    #pp["OUT_ANALYSIS"] = f"{out}/out/analysis"
+    pp["IN_ANALYSIS"] = "src/analysis"
     pp["OUT_FIGURES"] = f"{out}/out/figures"
     # OUT_MODEL_SPECS is only required for using Stata with JSON and
     # can be safely deleted otherwise
