@@ -5,6 +5,7 @@ from openpyxl import load_workbook
 import random
 from datetime import datetime
 import matplotlib.pyplot as plt
+from matplotlib.ticker import MaxNLocator
 
 
 # Load the training data.
@@ -86,9 +87,9 @@ for i in range(0, int(len(tuple_2)-1)):
 
 # Classify the articles with ex-ante unknown label.
 classifications_islam = classifier.classify_many(feature_sets_2)
-#print(classifications_islam)
+print(classifications_islam)
 
-
+###################################################################################################################
 # Save the number of articles classified as being about islamist terrorism and
 # the corresponding years in a dictionary.
 other_year = 0
@@ -97,7 +98,7 @@ year_new = 0
 islam_year = 0
 dict = {'year': [], "islam": []}
 for row_id in range(0, max_row_2 -2):     
-    if classifications_islam[row_id] == "islam":      
+    if not classifications_islam[row_id] != "islam":      
         islam_year =islam_year + 1     
     if (datetime.strptime(sheet_2.cell(row=row_id + 2, column=1).value, '%Y/%m/%d').year > year_old):
         year_new = int(datetime.strptime(sheet_2.cell(row=row_id + 2, column=1).value, '%Y/%m/%d').year)
@@ -111,12 +112,16 @@ dict["islam"].append(islam_year)
 dict["year"].append(year_old)       
        
     
+
 # Comvert the data to a pandas data frame.
 df = pd.DataFrame(data=dict)
+#print(df)
 
 # Plot the data as a line-chart.
+ax = plt.figure().gca()
 plt.plot( 'year', 'islam', data=df, marker='', color='red', linewidth=2, linestyle='dashed', label="number of reports on islamist terrorist attacks")
 #plt.plot( 'year', 'other', data=df, marker='', color='red', linewidth=2, linestyle='_ _', label="toto")
+ax.xaxis.set_major_locator(MaxNLocator(integer=True))
 plt.legend()
 
 # Save the plot.

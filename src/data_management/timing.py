@@ -31,7 +31,7 @@ dict_prediction = {'words': [], 'date': []}
 
 
 # Loop over all dates in the raw-excel file.
-for i_row in range(0, 4000):#max_row): 
+for i_row in range(0, 3600):#max_row): 
     try:
         # Skip a date if it is not indicated as containing articles about terrorism 
         # otherwise extract the titles of the articles about terrorism and save
@@ -76,7 +76,7 @@ for i_row in range(0, 4000):#max_row):
         else:
             islam_article_names_array = []
 
-        r1 = random.randint(1, 800) #800
+        r1 = random.randint(1, 900) #800
         if (if_indicator > 0) or (if_indicator == 0 and r1 < 2):
             try:
                 # Get the date from the excel-file and bring it in the right form to scrape.
