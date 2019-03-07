@@ -47,9 +47,8 @@ source_encoding = "utf-8"
 master_doc = "index"
 
 # General information about the project.
-project = u"Assignment 6"
-copyright = u"""2019-, Clara Bruenn, Laurenz Guenther, Anna Lane
-Tim Leffler, Cho Ho Ma"""
+project = u"Report Frequency of Islamic Terrorism"
+copyright = u"""2019-, Laurenz Guenther"""
 
 # The version info for the project you"re documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -199,8 +198,8 @@ latex_elements = {
 latex_documents = [(
     "index",
     "project_documentation.tex",
-    "Documentation of the Assignment 6 project",
-    "Tim Leffler, Cho Ho Ma, Clara Bruenn, Anna Lane, Laurenz Guenther",
+    "Documentation of Report Frequency of Islamic Terrorism",
+    "Laurenz Guenther",
     "manual"
 )]
 

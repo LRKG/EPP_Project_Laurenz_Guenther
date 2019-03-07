@@ -7,6 +7,4 @@ Original data
 
 Documentation of the different datasets in *original_data*.
 
-In the original data section you would store the raw data, which you should not manipulate to ensure reproducibility.
-
-If you want to include multiple data sets, you can also create subfolders for the sake of a clear structure.
+The original data has been hand-collected by me. I read through several 10.000 Bildzeitung articles (which can make you depressive), classified them as being about Islamic, right wing, left-wing, unspecified terrorism or not related to terrorism and noted the headlines of articles about terrorism.

@@ -87,9 +87,7 @@ for i in range(0, int(len(tuple_2)-1)):
 
 # Classify the articles with ex-ante unknown label.
 classifications_islam = classifier.classify_many(feature_sets_2)
-print(classifications_islam)
 
-###################################################################################################################
 # Save the number of articles classified as being about islamist terrorism and
 # the corresponding years in a dictionary.
 other_year = 0
@@ -112,10 +110,8 @@ dict["islam"].append(islam_year)
 dict["year"].append(year_old)       
        
     
-
 # Comvert the data to a pandas data frame.
 df = pd.DataFrame(data=dict)
-#print(df)
 
 # Plot the data as a line-chart.
 ax = plt.figure().gca()

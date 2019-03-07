@@ -4,7 +4,7 @@
 .. but it should at least contain the `toctree` directive.
 
 
-Welcome to the Assignment 6 project's documentation!
+Welcome to the documentation of the Report Frequency on Terrorism Project!
 ================================================================================================
 
 .. toctree::
@@ -15,6 +15,5 @@ Welcome to the Assignment 6 project's documentation!
     data_management
     analysis
     paper
-    model_code
     library
     references
